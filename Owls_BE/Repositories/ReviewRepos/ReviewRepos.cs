@@ -15,7 +15,6 @@ namespace Owls_BE.Repositories.ReviewRepos
 
         public async Task UploadReview(UserReviewBook review, string username)
         {
-
             var user = await context.Customers.FirstOrDefaultAsync(u => u.Username.Equals(username));
             if (user == null)
             { throw new Exception("User Not Found"); }
